@@ -23,7 +23,7 @@ const DataTablePanel = () => {
 
   const loadPage = async (page: number) => {
     setLoading(true);
-    const { data, total } = await fetchArtworks(page + 1); // API starts from 1
+    const { data, total } = await fetchArtworks(page + 1);
     setArtworks(data);
     setTotalRecords(total);
     setLoading(false);
@@ -109,7 +109,7 @@ const DataTablePanel = () => {
         onPage={onPageChange}
         first={page * rows}
         dataKey="id"
-        key={selectedRowsMap.size} // Refresh to reflect checkbox changes
+        key={selectedRowsMap.size} 
       >
         <Column
           header={headerCheckboxTemplate}
